@@ -82,11 +82,14 @@ Installation:
 
 NERC scorer: 
 > wget http://www.cnts.ua.ac.be/conll2000/chunking/conlleval.txt nerc-evaluation/
+
 > mv nerc-evaluation/conlleval.txt nerc-evaluation/conlleval.pl
 
 Temporal Relation evaluation:
 > git clone git@github.com:naushadzaman/tempeval3_toolkit.git
+
 > cp tempeval3_toolkit/evaluation-relations/relation_to_timegraph.py* scorer_CAT_event_timex_rel/
+
 > cp tempeval3_toolkit/evaluation-relations/* tempeval3_toolkit/timeline-evaluation/
 
 SRL scorer:
