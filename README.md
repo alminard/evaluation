@@ -43,7 +43,9 @@ Usage:
         -m           : list (separated by a comma) of modules to be evaluated (srl, nerc, ned, time, entcoref, eventcoref, fact, timeline, all)
 ```
 
-> sh run.sh -g gold_english/ -s system_naf_output_folder/ --timeline system_timeline_output_folder/ -r result_file -l lang -t temporal_folder/ -m [option]
+```
+sh run.sh -g gold_english/ -s system_naf_output_folder/ --timeline system_timeline_output_folder/ -r result_file -l lang -t temporal_folder/ -m [option]
+```
 
 lang:
 - en
