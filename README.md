@@ -32,6 +32,7 @@ Evaluation of the modules of the pipeline:
 - factuality
 
 Usage:
+```
         -h           : print this message
         -g           : path to the folder containing gold files
         -s           : path to the folder containing system files
@@ -40,7 +41,7 @@ Usage:
         -r           : path to the file in which the results will be printed
         -t           : path to a folder in which temporary files will be saved
         -m           : list (separated by a comma) of modules to be evaluated (srl, nerc, ned, time, entcoref, eventcoref, fact, timeline, all)
-
+```
 
 > sh run.sh -g gold_english/ -s system_naf_output_folder/ --timeline system_timeline_output_folder/ -r result_file -l lang -t temporal_folder/ -m [option]
 
@@ -66,9 +67,11 @@ Benchmarking files:
 If cross-document annotated files are different than intra-document annotated files, then they should be in the folder: gold_english/gold_CROMER/.
 
 In order to run the evaluation for Dutch, Spanish and Italian:
-> mkdir gold_dutch/
-> mkdir gold_dutch/gold_CAT/
-> mkdir gold_dutch/gold_CROMER/
+```
+mkdir gold_dutch/
+mkdir gold_dutch/gold_CAT/
+mkdir gold_dutch/gold_CROMER/
+```
 
 And copy the intra-doc files (annotated with CAT) into gold_dutch/gold_CAT/ and the cross-doc files (annotated with CROMER) into gold_dutch/gold_CROMER/.
 
@@ -76,21 +79,25 @@ The gold standard files can be downloaded from the newsreader website: http://ww
 
 
 Installation:
-> git clone https://github.com/newsreader/evaluation
-
-> cd evaluation/
+```
+git clone https://github.com/newsreader/evaluation
+cd evaluation/
+```
 
 NERC scorer: 
-> wget http://www.cnts.ua.ac.be/conll2000/chunking/conlleval.txt nerc-evaluation/
-
-> mv nerc-evaluation/conlleval.txt nerc-evaluation/conlleval.pl
+```
+wget http://www.cnts.ua.ac.be/conll2000/chunking/conlleval.txt nerc-evaluation/
+mv nerc-evaluation/conlleval.txt nerc-evaluation/conlleval.pl
+```
 
 Temporal Relation evaluation:
-> git clone git@github.com:naushadzaman/tempeval3_toolkit.git
-
-> cp tempeval3_toolkit/evaluation-relations/relation_to_timegraph.py* scorer_CAT_event_timex_rel/
-
-> cp tempeval3_toolkit/evaluation-relations/* tempeval3_toolkit/timeline-evaluation/
+```
+git clone git@github.com:naushadzaman/tempeval3_toolkit.git
+cp tempeval3_toolkit/evaluation-relations/relation_to_timegraph.py* scorer_CAT_event_timex_rel/
+cp tempeval3_toolkit/evaluation-relations/* tempeval3_toolkit/timeline-evaluation/
+```
 
 SRL scorer:
-> wget http://ufal.mff.cuni.cz/conll2009-st/eval09.pl srl-evaluation/
+```
+wget http://ufal.mff.cuni.cz/conll2009-st/eval09.pl srl-evaluation/
+```
